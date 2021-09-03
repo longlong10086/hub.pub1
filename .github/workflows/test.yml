@@ -1,5 +1,7 @@
-name: "find env"
-  
+name: Sync from upstream
+on:
+  workflow_dispatch:
+jobs:  
   run: |
     echo "Hello World!"
     set | grep GITHUB_ | grep -v GITHUB_TOKEN
