@@ -1,0 +1,19 @@
+name: testenv
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: testenv
+        run: |
+         echo "Hello World!"
+         set | grep GITHUB_ | grep -v GITHUB_TOKEN
+
+
+
+  
